@@ -104,7 +104,7 @@ flutter run
 
 ## 3️⃣ How It Works
 
-1. Flutter app calls `ApiCalls.test(amount)`
+1. Flutter app calls `ApiCalls.getClientSecret(amount)`
 2. Node.js server creates a Stripe **PaymentIntent** and returns `clientSecret`
 3. Flutter initializes **PaymentSheet** with the clientSecret
 4. User completes the payment
