@@ -1,10 +1,9 @@
-import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 
 class ApiCalls {
-  static Future<String> test(int amount) async {
+  static Future<String> getClientSecret(int amount) async {
     try {
       Response response = await Dio().post(
         // "http://localhost:3000/paymentIntent",

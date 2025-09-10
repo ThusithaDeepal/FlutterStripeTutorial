@@ -20,7 +20,7 @@ class _PaymentpageState extends State<Paymentpage> {
   }
 
   initCustomerSheet() async {
-    String paymentIntentClientSecret = await ApiCalls.test(
+    String paymentIntentClientSecret = await ApiCalls.getClientSecret(
       int.tryParse(_textEditingController.text.toString())!,
     );
 
