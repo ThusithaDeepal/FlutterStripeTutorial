@@ -42,12 +42,12 @@ class _PaymentpageState extends State<Paymentpage> {
     } on StripeException catch (e) {
       // ⚠️ Payment failed or cancelled
       if (e.error.code == FailureCode.Canceled) {
-        print("Payment was cancelled by user.");
+        debugPrint("Payment was cancelled by user.");
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text("Payment was cancelled by user.")),
         );
       } else {
-        print("Payment failed: ${e.error.localizedMessage}");
+        debugPrint("Payment failed: ${e.error.localizedMessage}");
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text("Payment failed: ${e.error.localizedMessage}"),
@@ -56,7 +56,7 @@ class _PaymentpageState extends State<Paymentpage> {
       }
     } catch (e) {
       // Any other unexpected error
-      print("Unexpected error: $e");
+      debugPrint("Unexpected error: $e");
     }
   }
 
@@ -93,7 +93,7 @@ class _PaymentpageState extends State<Paymentpage> {
                     initCustomerSheet();
                   }
                 },
-                child: Text("payment"),
+                child: Text("Pay"),
               ),
             ],
           ),
