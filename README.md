@@ -1,4 +1,4 @@
-Perfect! Here's a **complete `README.md`** you can use for your `stripe_payment_tutorial` project. It’s ready to copy and use:
+ Here's a **complete `README.md`** you can use for your `stripe_payment_tutorial` project. It’s ready to copy and use:
 
 ---
 
